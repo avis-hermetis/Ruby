@@ -7,7 +7,7 @@ class Train
   include Producer
 
   validate :number, :format, TRAIN_NUMBER
- 
+
   @@number = {}
 
   def self.find(number)
@@ -28,8 +28,6 @@ class Train
     validate!
     @@number[@number] = self
   end
-
-  
 
   def set_route(route)
     @route = route
@@ -94,6 +92,4 @@ class Train
   private
 
   TRAIN_NUMBER = /^([a-z]|\d){3}\-{0,1}([a-z]|\d){2}$/
-
-  
 end

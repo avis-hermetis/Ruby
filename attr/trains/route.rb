@@ -1,7 +1,7 @@
 class Route
   attr_reader :route
- 
- validate :station, :type, RailwayStation
+
+  validate :station, :type, RailwayStation
 
   def initialize(from, to)
     @from = from
@@ -30,6 +30,4 @@ class Route
   def intermed_stations
     puts route[1..-2]
   end
-
-  
 end

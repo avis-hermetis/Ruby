@@ -1,5 +1,4 @@
 class PassengerTrain < Train
-  
   attr_accessor :train
   def initialize(number, route = %w(Москва Владивосток))
     @number = number

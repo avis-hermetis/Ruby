@@ -1,5 +1,4 @@
 class CargoTrain < Train
-  
   attr_accessor :train
   def initialize(number, route = %w(Москва Владивосток))
     @number = number
@@ -24,6 +23,4 @@ class CargoTrain < Train
     к грузовому составу' if wagon.type == 'passenger'
     fail 'Вы не можете присоединять вагон на ходу' unless @speed.zero?
   end
-
-  
 end
