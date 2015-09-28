@@ -9,7 +9,8 @@ module Validation
 
   module ClassMethods
     def validate(verifiable_var_name, *args)
-      instance_variable_set :@validation, verifiable_var_name => args
+      @validation = {}
+      instance_variable_set :@validation, @validation.merge!({verifiable_var_name => args})
     end
   end
 
